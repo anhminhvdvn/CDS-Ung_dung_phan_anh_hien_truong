@@ -107,21 +107,19 @@ PhanAnhHienTruong
 
  
 
-<div align="center">
-<br>
+<div align="center"> 
+
 [![Flutter](https://img.shields.io/badge/Flutter-3.x-blue?style=for-the-badge&logo=flutter)]()
 [![GetX](https://img.shields.io/badge/GetX-State%20Management-purple?style=for-the-badge)]()
-[![Dart](https://img.shields.io/badge/Dart-2.x-blue?style=for-the-badge&logo=dart)]()
-</br>
+[![Dart](https://img.shields.io/badge/Dart-2.x-blue?style=for-the-badge&logo=dart)]() 
 </div>
 
 ### 🌐 Trang quản lý
-<div align="center">
-<br>
+<div align="center"> 
+
 [![React](https://img.shields.io/badge/React-18.x-blue?style=for-the-badge&logo=react)]()
 [![Vite](https://img.shields.io/badge/Vite-Build%20Tool-orange?style=for-the-badge)]()
-[![Tailwind](https://img.shields.io/badge/TailwindCSS-Design%20System-06B6D4?style=for-the-badge)]()
-</br>
+[![Tailwind](https://img.shields.io/badge/TailwindCSS-Design%20System-06B6D4?style=for-the-badge)]() 
 </div>
 
 ### 🧠 Backend & Cơ sở dữ liệu
@@ -141,28 +139,31 @@ PhanAnhHienTruong
 ### 1️⃣ Chuẩn bị môi trường
 - Cài **Flutter SDK**, **Node.js**, **MongoDB**.
 - Cài trình quản lý gói:  
-  ```bash
+  ``` 
   npm install -g pnpm
-
+  ```
 2️⃣ Cài đặt ứng dụng di động
- ```cd mobile_app
+ ```
+cd mobile_app
 flutter pub get
 flutter run
-
+```
 3️⃣ Cài đặt trang quản lý web
-```cd web_dashboard
+```
+cd web_dashboard
 pnpm install
 pnpm run dev
-
+```
 4️⃣ Khởi chạy API backend
 ```cd backend_api
 npm install
 npm start
-
+```
 📖 Hướng Dẫn Sử Dụng
 👩‍💼 Phía người dân (Mobile App)
 
-```Mở ứng dụng → chọn “Phản ánh mới”.
+```
+Mở ứng dụng → chọn “Phản ánh mới”.
 
 Chụp ảnh hoặc chọn ảnh có sẵn.
 
@@ -171,24 +172,29 @@ Nhập mô tả chi tiết sự việc.
 Chọn loại sự cố (rác, ngập, cây đổ, v.v).
 
 Gửi phản ánh → xem lại trạng thái trong tab “Lịch sử”.
+```
 
 🧑‍💻 Phía cơ quan (Web Dashboard)
 
-```Đăng nhập hệ thống quản lý.
+```
+Đăng nhập hệ thống quản lý.
 
 Xem danh sách phản ánh mới gửi.
 
 Lọc và xử lý theo loại hoặc khu vực.
 
 Cập nhật trạng thái để phản hồi người dân.
+```
 
 ⚙️ Cấu Hình & Lưu Ý
 
-```Ảnh được lưu trữ tạm thời trên Cloudinary hoặc server nội bộ.
+```
+Ảnh được lưu trữ tạm thời trên Cloudinary hoặc server nội bộ.
 
 Ứng dụng mobile hiện chưa hỗ trợ GPS, người dân nhập địa điểm bằng text.
 
 Có thể mở rộng để tích hợp bản đồ, chatbot hỗ trợ, và thông báo đẩy (Firebase).
+```
  
 🤝 Đóng góp
 
