@@ -62,38 +62,38 @@ Hệ thống gồm hai phần:
 
 ## 📂 Cấu trúc dự án
 
-PhanAnhHienTruong
-```├── 📱 mobile_app/ # Ứng dụng Flutter cho người dân```
-```│ ├── lib/```
-```│ │ ├── main.dart```
-```│ │ ├── controllers/ # GetX Controllers```
-```│ │ ├── views/ # Giao diện các màn hình```
-```│ │ ├── models/ # Model dữ liệu phản ánh```
-```│ │ └── services/ # API kết nối backend```
-```│ ├── assets/ # Ảnh, icon, logo```
-```│ ├── pubspec.yaml```
-```│ └── README.md```
-```│```
-```├── 🌐 web_dashboard/ # Trang quản lý phản ánh (React / NextJS)```
-```│ ├── src/```
-```│ │ ├── pages/```
-```│ │ ├── components/```
-```│ │ ├── services/```
-```│ │ └── store/```
-```│ ├── package.json```
-```│ └── README.md```
-```│```
-```├── 🧠 backend_api/ # API trung gian kết nối mobile và web```
-```│ ├── server.js (Node.js / NestJS)```
-```│ ├── routes/```
-```│ ├── controllers/```
-```│ ├── models/```
-```│ └── database/```
-```│```
-```└── 📄 README.md # Tài liệu chính của dự án```
+```PhanAnhHienTruong
+├── 📱 mobile_app/ # Ứng dụng Flutter cho người dân'
+│ ├── lib/
+│ │ ├── main.dart
+│ │ ├── controllers/ # GetX Controllers
+│ │ ├── views/ # Giao diện các màn hình
+│ │ ├── models/ # Model dữ liệu phản ánh
+│ │ └── services/ # API kết nối backend
+│ ├── assets/ # Ảnh, icon, logo
+│ ├── pubspec.yaml
+│ └── README.md
+│
+├── 🌐 web_dashboard/ # Trang quản lý phản ánh (React / NextJS)
+│ ├── src/
+│ │ ├── pages/
+│ │ ├── components/
+│ │ ├── services/
+│ │ └── store/
+│ ├── package.json
+│ └── README.md
+│
+├── 🧠 backend_api/ # API trung gian kết nối mobile và web
+│ ├── server.js (Node.js / NestJS)
+│ ├── routes/
+│ ├── controllers/
+│ ├── models/
+│ └── database/
+│
+└── 📄 README.md # Tài liệu chính của dự án
 
 
-```---```
+---```
 
 ## 🛠️ CÔNG NGHỆ SỬ DỤNG
 
