@@ -123,13 +123,12 @@ PhanAnhHienTruong
 </div>
 
 ### 🧠 Backend & Cơ sở dữ liệu
-<div align="center">
-<br>
+<div align="center"> 
+
 [![NodeJS](https://img.shields.io/badge/NodeJS-Server-brightgreen?style=for-the-badge&logo=node.js)]()
 [![Express](https://img.shields.io/badge/Express-Framework-lightgrey?style=for-the-badge)]()
 [![MongoDB](https://img.shields.io/badge/MongoDB-Database-green?style=for-the-badge&logo=mongodb)]()
-[![Cloudinary](https://img.shields.io/badge/Cloudinary-Image%20Storage-blue?style=for-the-badge&logo=cloudinary)]()
-</br>
+[![Cloudinary](https://img.shields.io/badge/Cloudinary-Image%20Storage-blue?style=for-the-badge&logo=cloudinary)]() 
 </div>
 
 ---
@@ -139,9 +138,9 @@ PhanAnhHienTruong
 ### 1️⃣ Chuẩn bị môi trường
 - Cài **Flutter SDK**, **Node.js**, **MongoDB**.
 - Cài trình quản lý gói:  
-  ``` 
-  npm install -g pnpm
-  ```
+``` 
+npm install -g pnpm
+```
 2️⃣ Cài đặt ứng dụng di động
  ```
 cd mobile_app
