@@ -11,6 +11,7 @@
 [![Fit DNU](https://img.shields.io/badge/Fit%20DNU-green?style=for-the-badge)](https://fitdnu.net/)
 [![DaiNam University](https://img.shields.io/badge/DaiNam%20University-red?style=for-the-badge)](https://dainam.edu.vn)
 
+</br>
 </div>
 
 ---
@@ -62,15 +63,14 @@ Hệ thống gồm hai phần:
 
 ## 📂 Cấu trúc dự án
 
-```PhanAnhHienTruong
+```
+PhanAnhHienTruong
 ├── 📱 mobile_app/ # Ứng dụng Flutter cho người dân'
 │ ├── lib/
-│ │ ├── main.dart
-│ │ ├── controllers/ # GetX Controllers
-│ │ ├── views/ # Giao diện các màn hình
-│ │ ├── models/ # Model dữ liệu phản ánh
-│ │ └── services/ # API kết nối backend
-│ ├── assets/ # Ảnh, icon, logo
+│ │ ├── models/ # Model dữ liệu phản ánh  
+│ │ ├── screens/ # Giao diện các màn hình
+│ │ ├── services/ # API kết nối backend
+│ │ └── main.dart  
 │ ├── pubspec.yaml
 │ └── README.md
 │
@@ -85,44 +85,53 @@ Hệ thống gồm hai phần:
 │
 ├── 🧠 backend_api/ # API trung gian kết nối mobile và web
 │ ├── server.js (Node.js / NestJS)
-│ ├── routes/
-│ ├── controllers/
-│ ├── models/
-│ └── database/
+│ ├── seed.js
+│ ├── package-lock.json
+│ ├── package.json
+│ ├── .gitignore
+│ ├── .env
+│ ├── uploads/
+│ ├── src/
+│ │ ├── models/
+│ │ └── routes/
+│ └── node/module
 │
 └── 📄 README.md # Tài liệu chính của dự án
+```
 
-
----```
+--- 
 
 ## 🛠️ CÔNG NGHỆ SỬ DỤNG
 
 ### 📱 Ứng dụng di động
-<div align="center">
 
+ 
+
+<div align="center">
+<br>
 [![Flutter](https://img.shields.io/badge/Flutter-3.x-blue?style=for-the-badge&logo=flutter)]()
 [![GetX](https://img.shields.io/badge/GetX-State%20Management-purple?style=for-the-badge)]()
 [![Dart](https://img.shields.io/badge/Dart-2.x-blue?style=for-the-badge&logo=dart)]()
-
+</br>
 </div>
 
 ### 🌐 Trang quản lý
 <div align="center">
-
+<br>
 [![React](https://img.shields.io/badge/React-18.x-blue?style=for-the-badge&logo=react)]()
 [![Vite](https://img.shields.io/badge/Vite-Build%20Tool-orange?style=for-the-badge)]()
 [![Tailwind](https://img.shields.io/badge/TailwindCSS-Design%20System-06B6D4?style=for-the-badge)]()
-
+</br>
 </div>
 
 ### 🧠 Backend & Cơ sở dữ liệu
 <div align="center">
-
+<br>
 [![NodeJS](https://img.shields.io/badge/NodeJS-Server-brightgreen?style=for-the-badge&logo=node.js)]()
 [![Express](https://img.shields.io/badge/Express-Framework-lightgrey?style=for-the-badge)]()
 [![MongoDB](https://img.shields.io/badge/MongoDB-Database-green?style=for-the-badge&logo=mongodb)]()
 [![Cloudinary](https://img.shields.io/badge/Cloudinary-Image%20Storage-blue?style=for-the-badge&logo=cloudinary)]()
-
+</br>
 </div>
 
 ---
@@ -136,24 +145,24 @@ Hệ thống gồm hai phần:
   npm install -g pnpm
 
 2️⃣ Cài đặt ứng dụng di động
-cd mobile_app
+ ```cd mobile_app
 flutter pub get
 flutter run
 
 3️⃣ Cài đặt trang quản lý web
-cd web_dashboard
+```cd web_dashboard
 pnpm install
 pnpm run dev
 
 4️⃣ Khởi chạy API backend
-cd backend_api
+```cd backend_api
 npm install
 npm start
 
 📖 Hướng Dẫn Sử Dụng
 👩‍💼 Phía người dân (Mobile App)
 
-Mở ứng dụng → chọn “Phản ánh mới”.
+```Mở ứng dụng → chọn “Phản ánh mới”.
 
 Chụp ảnh hoặc chọn ảnh có sẵn.
 
@@ -165,7 +174,7 @@ Gửi phản ánh → xem lại trạng thái trong tab “Lịch sử”.
 
 🧑‍💻 Phía cơ quan (Web Dashboard)
 
-Đăng nhập hệ thống quản lý.
+```Đăng nhập hệ thống quản lý.
 
 Xem danh sách phản ánh mới gửi.
 
@@ -175,7 +184,7 @@ Cập nhật trạng thái để phản hồi người dân.
 
 ⚙️ Cấu Hình & Lưu Ý
 
-Ảnh được lưu trữ tạm thời trên Cloudinary hoặc server nội bộ.
+```Ảnh được lưu trữ tạm thời trên Cloudinary hoặc server nội bộ.
 
 Ứng dụng mobile hiện chưa hỗ trợ GPS, người dân nhập địa điểm bằng text.
 
