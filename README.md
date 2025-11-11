@@ -3,13 +3,11 @@
 <div align="center">
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/anhminhvdvn/CanhBaoDotNhap/main/images/logoDaiNam.png" width="150">
-  <img src="https://raw.githubusercontent.com/anhminhvdvn/CanhBaoDotNhap/main/images/LogoAIoTLab.png" width="150">
+  <img src="https://raw.githubusercontent.com/anhminhvdvn/CanhBaoDotNhap/main/images/logoDaiNam.png" width="150"> 
 </p>
 
 <br>
-
-[![Made by AIoTLab](https://img.shields.io/badge/Made%20by%20AIoTLab-blue?style=for-the-badge)](https://www.facebook.com/DNUAIoTLab)
+ 
 [![Fit DNU](https://img.shields.io/badge/Fit%20DNU-green?style=for-the-badge)](https://fitdnu.net/)
 [![DaiNam University](https://img.shields.io/badge/DaiNam%20University-red?style=for-the-badge)](https://dainam.edu.vn)
 
@@ -65,37 +63,37 @@ Hệ thống gồm hai phần:
 ## 📂 Cấu trúc dự án
 
 PhanAnhHienTruong
-├── 📱 mobile_app/ # Ứng dụng Flutter cho người dân
-│ ├── lib/
-│ │ ├── main.dart
-│ │ ├── controllers/ # GetX Controllers
-│ │ ├── views/ # Giao diện các màn hình
-│ │ ├── models/ # Model dữ liệu phản ánh
-│ │ └── services/ # API kết nối backend
-│ ├── assets/ # Ảnh, icon, logo
-│ ├── pubspec.yaml
-│ └── README.md
-│
-├── 🌐 web_dashboard/ # Trang quản lý phản ánh (React / NextJS)
-│ ├── src/
-│ │ ├── pages/
-│ │ ├── components/
-│ │ ├── services/
-│ │ └── store/
-│ ├── package.json
-│ └── README.md
-│
-├── 🧠 backend_api/ # API trung gian kết nối mobile và web
-│ ├── server.js (Node.js / NestJS)
-│ ├── routes/
-│ ├── controllers/
-│ ├── models/
-│ └── database/
-│
-└── 📄 README.md # Tài liệu chính của dự án
+```├── 📱 mobile_app/ # Ứng dụng Flutter cho người dân```
+```│ ├── lib/```
+```│ │ ├── main.dart```
+```│ │ ├── controllers/ # GetX Controllers```
+```│ │ ├── views/ # Giao diện các màn hình```
+```│ │ ├── models/ # Model dữ liệu phản ánh```
+```│ │ └── services/ # API kết nối backend```
+```│ ├── assets/ # Ảnh, icon, logo```
+```│ ├── pubspec.yaml```
+```│ └── README.md```
+```│```
+```├── 🌐 web_dashboard/ # Trang quản lý phản ánh (React / NextJS)```
+```│ ├── src/```
+```│ │ ├── pages/```
+```│ │ ├── components/```
+```│ │ ├── services/```
+```│ │ └── store/```
+```│ ├── package.json```
+```│ └── README.md```
+```│```
+```├── 🧠 backend_api/ # API trung gian kết nối mobile và web```
+```│ ├── server.js (Node.js / NestJS)```
+```│ ├── routes/```
+```│ ├── controllers/```
+```│ ├── models/```
+```│ └── database/```
+```│```
+```└── 📄 README.md # Tài liệu chính của dự án```
 
 
----
+```---```
 
 ## 🛠️ CÔNG NGHỆ SỬ DỤNG
 
@@ -182,9 +180,7 @@ Cập nhật trạng thái để phản hồi người dân.
 Ứng dụng mobile hiện chưa hỗ trợ GPS, người dân nhập địa điểm bằng text.
 
 Có thể mở rộng để tích hợp bản đồ, chatbot hỗ trợ, và thông báo đẩy (Firebase).
-
-📰 Poster Giới Thiệu
-<p align="center"> <img src="https://raw.githubusercontent.com/anhminhvdvn/CanhBaoDotNhap/main/images/Poster_CNTT5_Aiot.png"> </p>
+ 
 🤝 Đóng góp
 
 Dự án được phát triển bởi Nhóm 6 – CNTT16-05, Khoa Công Nghệ Thông Tin, Trường Đại học Đại Nam
