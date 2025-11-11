@@ -1,15 +1,11 @@
-<h1 align="center">ỨNG DỤNG CÔNG NGHỆ TRONG HỆ THỐNG CẢNH BÁO ĐỘT NHẬP</h1>
-<div align="center">
+<h1 align="center">ỨNG DỤNG PHẢN ÁNH HIỆN TRƯỜNG</h1>
 
+<div align="center">
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/anhminhvdvn/CanhBaoDotNhap/main/images/logoDaiNam.png" width="150">
   <img src="https://raw.githubusercontent.com/anhminhvdvn/CanhBaoDotNhap/main/images/LogoAIoTLab.png" width="150">
 </p>
-
-
-
-
 
 <br>
 
@@ -19,183 +15,179 @@
 
 </div>
 
+---
 
 ## 🌟 Giới thiệu
 
-Hệ thống cảnh báo đột nhập sử dụng công nghệ nhận diện khuôn mặt và cơ sở dữ liệu db. Ứng dụng này cho phép người dùng dễ dàng bảo vệ an ninh của ngôi nhà, thực hiện nhận diện và báo động khi cần thiết.
+**Ứng dụng Phản Ánh Hiện Trường** là một hệ thống công nghệ hỗ trợ người dân **gửi thông tin phản ánh** về các sự cố ngoài hiện trường (như **rác thải, cây đổ, tắc đường, tai nạn, ngập lụt, thiết bị công cộng hỏng, đánh nhau**, …) tới **cơ quan chức năng** để kịp thời xử lý.
+
+Hệ thống gồm hai phần:
+- **Ứng dụng di động (Mobile App)**: Người dân gửi phản ánh bằng **hình ảnh, mô tả và loại sự cố**.
+- **Trang quản lý (Web Dashboard)**: Cơ quan chức năng tiếp nhận, xem và xử lý phản ánh theo thời gian thực.
+
+---
+
+## ⚙️ Mục tiêu
+
+- Tăng tính **minh bạch, kết nối hai chiều** giữa người dân và cơ quan quản lý.  
+- Rút ngắn thời gian **phát hiện – xử lý – phản hồi** các sự cố công cộng.  
+- Ứng dụng dễ sử dụng, thân thiện, chạy tốt trên điện thoại Android/iOS.
 
 ---
 
 ## 🌟 Tính năng chính
 
-- **Nhận diện tự động tự động:** Hệ thống sử dụng camera để quét khuôn mặt người và phát âm thanh khi khuôn mặt được nhận diện. Hệ thống sẽ báo âm thanh chào mừng nếu là người quen ngược lại phát báo động.
-- **Thông báo trực quan:** Khi nhận dạng được người có trong dữ liệu, hệ thống sẽ hiển thị thông tin trên giao diện người dùng. Nếu có trường hợp không nhận diện được khuôn mặt sẽ = người lạ sẽ được hiển thị.
-- **Quản lý dữ liệu:** Dữ liệu nhận diện và thông tin người quen được lưu trữ trong SQL Server.
-- **Giao diện thân thiện:** Sử dụng Python tkinter cho giao diện người dùng với webcam để quét khuôn mặt, xử lý nhận dạng cũng như lưu dữ liệu. Giao diện người dùng được thiết kế đơn giản và dễ sử dụng.
-- **Phát hiện khuôn mặt:** Sử dụng thư viện BDPH để phát hiện khuôn mặt và cv2 để xác thực các khuôn mặt so với cơ sở dữ liệu đã lưu trữ.
-- **Cải thiện hình ảnh:** Hệ thống cải thiện chất lượng hình ảnh trước khi xác thực bằng các kỹ thuật như tăng độ nét và điều chỉnh độ sáng.
+### 📱 **Ứng dụng di động (người dân)**
+- **Gửi phản ánh hiện trường:**
+  - Chụp ảnh hoặc chọn ảnh từ thư viện.
+  - Nhập **mô tả ngắn gọn** về sự việc.
+  - Chọn **loại sự cố** (rác thải, ngập, cây đổ, tai nạn…).
+  - Gửi phản ánh trực tiếp đến hệ thống.
 
---- 
+- **Theo dõi phản ánh đã gửi:**
+  - Xem danh sách các phản ánh đã nộp.
+  - Theo dõi **trạng thái xử lý** (chưa xử lý / đang xử lý / đã xử lý).
+
+- **Giao diện thân thiện:**
+  - Thiết kế bằng **Flutter**, bố cục rõ ràng, dễ thao tác.
+  - Hỗ trợ **đa ngôn ngữ** (có thể mở rộng).
+
+---
+
+### 🖥️ **Trang quản lý (dành cho cơ quan chức năng)**
+- **Xem danh sách phản ánh:** hiển thị hình ảnh, loại sự cố, mô tả, thời gian gửi.  
+- **Phân loại và lọc phản ánh:** theo loại sự cố hoặc trạng thái xử lý.  
+- **Cập nhật trạng thái xử lý:** dễ dàng thay đổi tiến độ và phản hồi người dân.  
+- **Quản lý tài khoản người dùng:** hỗ trợ xác thực và phân quyền quản trị.
+
+---
 
 ## 📂 Cấu trúc dự án
-BTL_IOT  
-├── 📂 data_face            # File lưu ảnh nhận diện  
-│   ├── 🖼️ anh1.jpg        # Ảnh tạm lưu trong quá trình nhận diện  
-│   ├── 🖼️ anh2.jpg        # Ảnh tạm lưu trong quá trình nhận diện  
-├── 📂 intruders            # File lưu ảnh người lạ  
-│   ├── 🖼️ anh1.jpg        # Ảnh tạm lưu trong quá trình nhận diện  
-│   ├── 🖼️ anh2.jpg        # Ảnh tạm lưu trong quá trình nhận diện  
-├── 📂 trainer              # File trainner  
-│   ├── 📄 face-trainer.yaml # File trainer  
-├── 📄 _alert.mp3           # File âm thanh cảnh báo  
-├── 📄 _hello.mp3           # File âm thanh chào mừng  
-├── 📄 FaceBase.db          # File dữ liệu database  
-├── 📄 giaodien.py          # File code giao diện  
-├── 📄 KhuonMat.xml         # File logic nhận diện  
-├── 📄 lay_dulieu.py        # File code lấy dữ liệu  
-├── 📄 nhan_dien.py         # File code nhận diện  
-├── 📄 training.py          # File code training  
 
- ### 🛠️ CÔNG NGHỆ SỬ DỤNG
-<h3 align="center">📡 Phần cứng</h1>
+PhanAnhHienTruong
+├── 📱 mobile_app/ # Ứng dụng Flutter cho người dân
+│ ├── lib/
+│ │ ├── main.dart
+│ │ ├── controllers/ # GetX Controllers
+│ │ ├── views/ # Giao diện các màn hình
+│ │ ├── models/ # Model dữ liệu phản ánh
+│ │ └── services/ # API kết nối backend
+│ ├── assets/ # Ảnh, icon, logo
+│ ├── pubspec.yaml
+│ └── README.md
+│
+├── 🌐 web_dashboard/ # Trang quản lý phản ánh (React / NextJS)
+│ ├── src/
+│ │ ├── pages/
+│ │ ├── components/
+│ │ ├── services/
+│ │ └── store/
+│ ├── package.json
+│ └── README.md
+│
+├── 🧠 backend_api/ # API trung gian kết nối mobile và web
+│ ├── server.js (Node.js / NestJS)
+│ ├── routes/
+│ ├── controllers/
+│ ├── models/
+│ └── database/
+│
+└── 📄 README.md # Tài liệu chính của dự án
 
 
-<div align="center"> 
-<br>
+---
 
-[![CameraIP](https://img.shields.io/badge/Webcam-000000?style=for-the-badge)](https://www.logitech.com/en-us/products/webcams)
-[![MTCNN](https://img.shields.io/badge/MTCNN-00979D?style=for-the-badge)](https://github.com/ipazc/mtcnn)
-[![DeepFace](https://img.shields.io/badge/DeepFace-FF5722?style=for-the-badge)](https://github.com/serengil/deepface)
+## 🛠️ CÔNG NGHỆ SỬ DỤNG
+
+### 📱 Ứng dụng di động
+<div align="center">
+
+[![Flutter](https://img.shields.io/badge/Flutter-3.x-blue?style=for-the-badge&logo=flutter)]()
+[![GetX](https://img.shields.io/badge/GetX-State%20Management-purple?style=for-the-badge)]()
+[![Dart](https://img.shields.io/badge/Dart-2.x-blue?style=for-the-badge&logo=dart)]()
 
 </div>
 
-<h3 align="center">🖥️ Phần mềm</h1>
+### 🌐 Trang quản lý
+<div align="center">
 
-
-<div align="center"> 
-<br>
-
-[![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)]() 
-[![OpenCV](https://img.shields.io/badge/OpenCV-4.x-blue?style=for-the-badge)]() 
-[![React](https://img.shields.io/badge/React-17.0.
-::contentReference[oaicite:0]{index=0}
+[![React](https://img.shields.io/badge/React-18.x-blue?style=for-the-badge&logo=react)]()
+[![Vite](https://img.shields.io/badge/Vite-Build%20Tool-orange?style=for-the-badge)]()
+[![Tailwind](https://img.shields.io/badge/TailwindCSS-Design%20System-06B6D4?style=for-the-badge)]()
 
 </div>
 
-## 🛠️ Yêu cầu hệ thống
-### 🔌 Phần cứng
-Camera IP (ví dụ: camera an ninh Wi-Fi hoặc camera USB).
-Cáp mạng (nếu sử dụng camera IP qua cổng mạng).
-Máy tính để chạy ứng dụng an ninh.
-⚠️ Lưu ý: Đảm bảo camera IP đã được cấu hình đúng để có thể kết nối với mạng nội bộ.
-### 💻 Phần mềm
-🐍 Python 3+ 
-⚡ Thư viện OpenCV để xử lý hình ảnh từ camera.
-### 📦 Các thư viện Python cần thiết
-Cài đặt các thư viện bằng lệnh:
-pip install flask opencv-contrib-python numpy pillow sqlite3
+### 🧠 Backend & Cơ sở dữ liệu
+<div align="center">
 
-## 🧮 Hướng dẫn kết nối camera IP tới máy tính
-### 🔌 Kết nối phần cứng:
+[![NodeJS](https://img.shields.io/badge/NodeJS-Server-brightgreen?style=for-the-badge&logo=node.js)]()
+[![Express](https://img.shields.io/badge/Express-Framework-lightgrey?style=for-the-badge)]()
+[![MongoDB](https://img.shields.io/badge/MongoDB-Database-green?style=for-the-badge&logo=mongodb)]()
+[![Cloudinary](https://img.shields.io/badge/Cloudinary-Image%20Storage-blue?style=for-the-badge&logo=cloudinary)]()
 
-## ⛓️‍💥 Hướng Dẫn Kết Nối
-
-### 1️⃣ Cài Đặt Camera IP
-- Kết nối camera IP vào nguồn điện và vào mạng Wi-Fi.  
-- Sử dụng ứng dụng/phần mềm đi kèm để cấu hình SSID và mật khẩu Wi-Fi.  
-
-### 2️⃣ Lấy Địa Chỉ IP Của Camera
-- Sau khi cấu hình, kiểm tra địa chỉ IP của camera (ví dụ: `http://192.168.1.100`).  
-- Đảm bảo có thể truy cập camera thông qua trình duyệt.  
-
-### 3️⃣ Kết Nối Camera Tới Máy Tính
-- Mở ứng dụng Python trên máy tính.  
-- Dùng địa chỉ IP lấy được để thiết lập kết nối với Flask.  
-
-### 4️⃣ Kiểm Tra Kết Nối Bằng OpenCV
-Sử dụng đoạn code sau để kiểm tra kết nối:  
-
-```python
-import cv2
-
-camera_ip = 'http://127.0.0.1:5000/detect'  # Thay bằng địa chỉ IP của camera
-cap = cv2.VideoCapture(camera_ip)
-
-while True:
-    ret, frame = cap.read()
-    if not ret:
-        break
-    cv2.imshow('Camera Feed', frame)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-cap.release()
-cv2.destroyAllWindows()
-```
-
-⚠ **Lưu ý:**  
-- Đảm bảo firewall không chặn kết nối đến địa chỉ IP của camera.  
-- Camera và máy tính phải cùng mạng để truy cập và xử lý hình ảnh hiệu quả.  
+</div>
 
 ---
 
-## 🚀 Hướng Dẫn Cài Đặt & Chạy
+## 🚀 Hướng Dẫn Cài Đặt
 
-### 1️⃣ Chuẩn Bị Phần Mềm 
-- **Cài đặt Python 3**: Đảm bảo thêm Python vào PATH khi cài đặt.   
+### 1️⃣ Chuẩn bị môi trường
+- Cài **Flutter SDK**, **Node.js**, **MongoDB**.
+- Cài trình quản lý gói:  
+  ```bash
+  npm install -g pnpm
 
-### 2️⃣ Cài Đặt Thư Viện
-```bash
-pip install flask opencv-contrib-python numpy pillow sqlite3
-```
+2️⃣ Cài đặt ứng dụng di động
+cd mobile_app
+flutter pub get
+flutter run
 
-### 3️⃣ Chạy ứng dụng
-```bash 
-python giaodien.py
-```  
+3️⃣ Cài đặt trang quản lý web
+cd web_dashboard
+pnpm install
+pnpm run dev
 
-## 📖 Hướng Dẫn Sử Dụng
+4️⃣ Khởi chạy API backend
+cd backend_api
+npm install
+npm start
 
-### 1️⃣ Thêm dữ liệu người quen trên giao diện
-- người dùng sử dụng camera để chụp hình khuôn mặt.
-- Hệ thống sẽ chụp 100 ảnh từ camera để lấy dữ liệu training.
-- Nếu nhận diện thành công, thông tin sẽ được lưu vào cơ sở dữ liệu.
+📖 Hướng Dẫn Sử Dụng
+👩‍💼 Phía người dân (Mobile App)
 
-### 2️⃣ Training dữ liệu
-- người dùng chọn nút Training trên giao diện sau khi đã lấy dữ liệu khuôn mặt để tự động thực hiện train dữ liệu
-  
-### 3️⃣ Bắt đầu nhận diện
-- Người dùng ấn vào nút nhận diện trên giao diện để bắt đầu chương trình nhận diện stream trực tiếp qua camera, liên tục nhận diện khi phát hiện khuôn mặt.
-- ảnh người lạ sẽ được lưu ở folder intruder.
+Mở ứng dụng → chọn “Phản ánh mới”.
 
----
+Chụp ảnh hoặc chọn ảnh có sẵn.
 
-## ⚙️ Cấu Hình & Ghi Chú
- 
-### Cấu Hình Camera
-- Kiểm tra kết nối và cấp quyền truy cập camera.
-- Có thể sử dụng webcam trên máy tính.
+Nhập mô tả chi tiết sự việc.
 
-### Cài Đặt Thư Viện Cần Thiết
-```bash
-pip install flask opencv-contrib-python numpy pillow sqlite3
-``` 
+Chọn loại sự cố (rác, ngập, cây đổ, v.v).
 
-### Xử Lý Thông Báo & Lỗi
-- Theo dõi console của server để kiểm tra thông báo lỗi.
+Gửi phản ánh → xem lại trạng thái trong tab “Lịch sử”.
 
-Với hướng dẫn này, bạn có thể sử dụng và cấu hình hệ thống điểm danh tự động dựa trên nhận diện khuôn mặt một cách hiệu quả. 🚀
+🧑‍💻 Phía cơ quan (Web Dashboard)
 
----
-## 📰 Poster
+Đăng nhập hệ thống quản lý.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/anhminhvdvn/CanhBaoDotNhap/main/images/Poster_CNTT5_Aiot.png"  > 
-</p>
+Xem danh sách phản ánh mới gửi.
 
-## 🤝 Đóng góp
+Lọc và xử lý theo loại hoặc khu vực.
 
-Dự án được phát triển bởi Phạm Ngọc Minh - sinh viên khoa CNTT trường Đại học Đại Nam
- 
+Cập nhật trạng thái để phản hồi người dân.
+
+⚙️ Cấu Hình & Lưu Ý
+
+Ảnh được lưu trữ tạm thời trên Cloudinary hoặc server nội bộ.
+
+Ứng dụng mobile hiện chưa hỗ trợ GPS, người dân nhập địa điểm bằng text.
+
+Có thể mở rộng để tích hợp bản đồ, chatbot hỗ trợ, và thông báo đẩy (Firebase).
+
+📰 Poster Giới Thiệu
+<p align="center"> <img src="https://raw.githubusercontent.com/anhminhvdvn/CanhBaoDotNhap/main/images/Poster_CNTT5_Aiot.png"> </p>
+🤝 Đóng góp
+
+Dự án được phát triển bởi Nhóm 6 – CNTT16-05, Khoa Công Nghệ Thông Tin, Trường Đại học Đại Nam
+Dưới sự hướng dẫn của Phòng Lab AIoT (AIoT Lab – DNU).
 
 © 2025 NHÓM 6, CNTT16-05, TRƯỜNG ĐẠI HỌC ĐẠI NAM
